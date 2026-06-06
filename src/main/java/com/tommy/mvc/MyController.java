@@ -3,6 +3,7 @@ package com.tommy.mvc;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -20,13 +21,10 @@ public class MyController {
     }
 
     @RequestMapping("/showDetails")
-    public String showDetails (HttpServletRequest request, Model model) {
-        String empName = request.getParameter("employeeName");
+    public String showDetails (@RequestParam("employeeName")
+                               String empName, Model model) {
         empName = "Mr " + empName;
         model.addAttribute("nameAttribute", empName);
-
-
-
         return "show-details";
     }
 
