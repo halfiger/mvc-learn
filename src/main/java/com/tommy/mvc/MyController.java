@@ -2,6 +2,7 @@ package com.tommy.mvc;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -17,19 +18,15 @@ public class MyController {
     }
 
     @RequestMapping("/askDetails")
-    public String askDetails () {
+    public String askDetails (Model model) {
+        model.addAttribute("employee", new Employee());
         return "ask-details";
     }
 
     @RequestMapping("/showDetails")
-    public String showDetails (@RequestParam("employeeName")
-                               String empName, Model model) {
-        empName = "Mr " + empName;
-        model.addAttribute("nameAttribute", empName);
+    public String showDetails (@ModelAttribute("employee") Employee emp) {
         return "show-details";
     }
-
-
 
     //localhost:8080/mvc/
     //localhost:8080/mvc/askDetails

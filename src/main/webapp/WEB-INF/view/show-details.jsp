@@ -7,11 +7,12 @@
 
 <br>
 <br>
+Your name: ${employee.name}
 <br>
-
-<%-- your name is ${param.employeeName} --%>
-
-Your name: ${nameAttribute}
+Your surname: ${employee.surname}
+<br>
+Your salary: ${employee.salary}
+<br>
 
 </body>
 

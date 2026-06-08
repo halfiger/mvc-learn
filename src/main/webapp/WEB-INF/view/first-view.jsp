@@ -4,11 +4,11 @@
 
 <body>
 
-<h2> hello spring </h2>
+<h2> Employee Portal</h2>
 <br>
 <br>
 
-<a href="askDetails">write details</a>
+<a href="askDetails">Add employee</a>
 
 </body>
 
