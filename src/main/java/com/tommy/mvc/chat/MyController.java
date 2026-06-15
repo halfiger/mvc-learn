@@ -1,4 +1,4 @@
-package com.tommy.mvc;
+package com.tommy.mvc.chat;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -6,7 +6,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import javax.servlet.http.HttpServletRequest;
+import java.util.HashMap;
+import java.util.Map;
 
 @Controller
 @RequestMapping ("/employee")
@@ -15,13 +16,19 @@ public class MyController {
     @RequestMapping("/home")
     public String showFirstView (Model model) {
         model.addAttribute("message", "Welcome to Employee Portal");
-        model.addAttribute("koko", "hello kokokoko" );
         return "first-view";
     }
 
     @RequestMapping("/askDetails")
     public String askDetails (Model model) {
         model.addAttribute("employee", new Employee());
+
+        Map<String, String> departments = new HashMap<>();
+        departments.put("IT", "Information Technology");
+        departments.put("HR", "Human Resources");
+        departments.put("Sales", "Sales Department");
+        model.addAttribute(departments);
+
         return "ask-details";
     }
 
@@ -60,6 +67,9 @@ public class MyController {
         model.addAttribute("greetingName", name);
         return "show-greeting";
     }
+
+
+
 
 
     //localhost:8080/mvc/

@@ -18,6 +18,20 @@
         <br>
         Salary <form:input path="salary"/>
         <br>
+
+
+        <br>
+        Department <form:select path="department">
+        <form:option value="12345" label="IT" />
+        <form:options items="${departments}" />
+        </form:select>
+        <br>
+
+
+        <br>
+        Email <form:input path="email"/>
+        <br>
+        Phone Number <form:input path="phoneNumber"/>
         <br>
 
        <input type="submit" value ="OK">

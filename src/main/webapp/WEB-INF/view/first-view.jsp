@@ -28,7 +28,6 @@
 <br>
 
 ${message}
-${koko}
 
 <br>
 </body>
