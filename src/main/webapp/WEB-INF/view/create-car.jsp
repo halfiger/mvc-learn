@@ -15,15 +15,9 @@ volume <form:input path="volume"/>
 <br>
 
 privid <form:select path="privid">
-<form:option value="zadniy" label="zd"/>
-<form:option value="peredniy" label="pd"/>
-<form:option value="full" label="4x4"/>
+<form:option value = "99999" label = "no privid"/>
+<form:options items="${privids}"/>
 </form:select>
-
-
-
-
-
 
 <input type="submit" value ="OK">
 </form:form>

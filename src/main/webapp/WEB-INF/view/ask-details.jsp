@@ -23,8 +23,8 @@
 
         <br>
         Department <form:select path="department">
-        <form:option value="12345" label="IT" />
-        <form:options items="${departments}" />
+        <form:option value="12345" label="IT"/>
+        <form:options items="${departments}"/>
         </form:select>
         <br>
 

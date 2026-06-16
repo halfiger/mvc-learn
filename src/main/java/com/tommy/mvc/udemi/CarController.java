@@ -5,6 +5,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.util.HashMap;
+import java.util.Map;
+
 @Controller
 @RequestMapping("/car")
 public class CarController {
@@ -17,6 +20,12 @@ public class CarController {
 
     @RequestMapping("/createCar")
     public String createCar (Model model) {
+        Map privids = new HashMap();
+        privids.put("front", "fr");
+        privids.put("backward", "bk");
+        privids.put("full", "4x4");
+        model.addAttribute("privids", privids);
+
         Car car = new Car();
         car.setVolume(44);
         car.setBrand("444");
