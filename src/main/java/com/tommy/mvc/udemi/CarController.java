@@ -2,6 +2,7 @@ package com.tommy.mvc.udemi;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
@@ -14,11 +15,21 @@ public class CarController {
         return "car-portal";
     }
 
-    @RequestMapping("/create-car")
+    @RequestMapping("/createCar")
     public String createCar (Model model) {
-        model.addAttribute("car", new Car());
+        Car car = new Car();
+        car.setVolume(44);
+        car.setBrand("444");
+        car.setColor("4444");
+        model.addAttribute("car", car);
+
         return "create-car";
     }
 
+    @RequestMapping("/showCar")
+    public String showCar (@ModelAttribute("car")Car car) {
+
+        return "show-car";
+    }
 
 }
