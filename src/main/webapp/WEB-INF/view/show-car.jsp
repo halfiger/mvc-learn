@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 
 <html>
@@ -11,6 +12,7 @@ Color ${car.color}
 <br>
 Volume ${car.volume}
 <br>
+Privid ${car.privid}
 
 </body>
 

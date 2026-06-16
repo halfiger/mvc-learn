@@ -2,13 +2,23 @@ package com.tommy.mvc.udemi;
 
 public class Car {
 
-    String brand;
+    private String brand;
 
-    String color;
+    private String color;
 
-    int volume;
+    private int volume;
+
+    private String privid;
 
     public Car() {
+    }
+
+    public String getPrivid() {
+        return privid;
+    }
+
+    public void setPrivid(String privid) {
+        this.privid = privid;
     }
 
     public String getBrand() {
@@ -41,6 +51,7 @@ public class Car {
                 "brand='" + brand + '\'' +
                 ", color='" + color + '\'' +
                 ", volume=" + volume +
+                ", privid='" + privid + '\'' +
                 '}';
     }
 }
