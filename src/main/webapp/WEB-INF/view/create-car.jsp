@@ -19,6 +19,12 @@ privid <form:select path="privid">
 <form:options items="${privids}"/>
 </form:select>
 
+<br>
+yrs<form:checkboxes path = "tos" items="${car.yearsOfTOList}"/>
+<br>
+
+country <form:radiobuttons path="country" items = "${countrys}"/>
+
 <input type="submit" value ="OK">
 </form:form>
 
