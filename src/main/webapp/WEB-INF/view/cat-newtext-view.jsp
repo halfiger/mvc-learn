@@ -4,7 +4,7 @@
 
 <BODY>
 
-<form action="catShow" method="GET">
+<form action="catShowText" method="GET">
 <input type = "text" name="any">
 <input type = "submit" value = "ok">
 </form>

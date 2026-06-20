@@ -3,25 +3,24 @@ Copy-Item "D:\Mvc\mvc\target\mvc.war" "C:\java\apache-tomcat\apache-tomcat-9.0.1
 cd C:\java\apache-tomcat\apache-tomcat-9.0.118\bin
 .\catalina.bat run
 
-(deploy script)
 
 Треба сформувати завдання для практики цих питань у переліку,
     створюємо покроках і я питаю якщо не виходить
     
     55. Introduction to Spring MVC
-        56. Spring MVC Application Configuration (IntelliJ IDEA + NetBeans)
-        57. First Spring MVC application
-        58. Using data in View
-        59. Model Component
-        60. @RequestParam Annotation
-        61. @RequestMapping annotation for Controller class
-        62. Spring MVC input form
-        63. Spring MVC select form
-        64. Spring MVC radiobutton form
-        65. Spring MVC checkbox form
-        66. Data validation: @Size, @NotEmpty, @NotBlank
-        67. Data Validation: @Min, @Max, @Pattern
-        68. Data Validation: Creating Your Own Annotation
+    56. Spring MVC Application Configuration (IntelliJ IDEA + NetBeans)
+    57. First Spring MVC application
+    58. Using data in View
+    59. Model Component
+    60. @RequestParam Annotation
+    61. @RequestMapping annotation for Controller class
+    62. Spring MVC input form
+    63. Spring MVC select form
+    64. Spring MVC radiobutton form
+    65. Spring MVC checkbox form
+    66. Data validation: @Size, @NotEmpty, @NotBlank
+    67. Data Validation: @Min, @Max, @Pattern
+    68. Data Validation: Creating Your Own Annotation
     
     ----------------------------Employee.java------------------------
     package com.tommy.mvc;

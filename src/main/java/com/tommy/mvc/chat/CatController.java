@@ -16,15 +16,27 @@ public class CatController {
         return "cat-home-view";
     }
 
-    @RequestMapping ("/catCreate")
-    public String createCat (Model model) {
+    @RequestMapping ("/catCreateText")
+    public String createCatText (Model model) {
         model.addAttribute("newCat", new Cat());
-        return "cat-new-view";
+        return "cat-newtext-view";
+    }
+
+    @RequestMapping ("/catShowText")
+    public String showText (@RequestParam("any") String any, Model model) {
+        model.addAttribute("any", any);
+        return "cat-showtext-view";
+    }
+
+    @RequestMapping ("/catNew")
+    public String createCat (Model model) {
+        model.addAttribute("cat", new Cat());
+        return "cat-new";
     }
 
     @RequestMapping ("/catShow")
-    public String showCat (@RequestParam("any") String any, Model model) {
-        model.addAttribute("any", any);
-        return "cat-show-view";
+    public String showCat (@ModelAttribute ("cat") Cat cat) {
+        return "cat-show";
     }
+
 }

@@ -5,10 +5,11 @@
 
 <h3>
 
-
-message from task1: ${message}
-
-    <a href="${pageContext.request.contextPath}/cat/catCreate"> Add cat </a>
+    message from task1: ${message}
+    <br>
+    <a href="${pageContext.request.contextPath}/cat/catNew"> Add cat </a>
+    <br>
+    <a href="${pageContext.request.contextPath}/cat/"> Refresh page </a>
 
 </h3>
 
