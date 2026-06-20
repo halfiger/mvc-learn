@@ -1,4 +1,11 @@
-    Треба сформувати завдання для практики цих питань у переліку,
+mvn clean package
+Copy-Item "D:\Mvc\mvc\target\mvc.war" "C:\java\apache-tomcat\apache-tomcat-9.0.118\webapps\mvc.war" -Force
+cd C:\java\apache-tomcat\apache-tomcat-9.0.118\bin
+.\catalina.bat run
+
+(deploy script)
+
+Треба сформувати завдання для практики цих питань у переліку,
     створюємо покроках і я питаю якщо не виходить
     
     55. Introduction to Spring MVC
