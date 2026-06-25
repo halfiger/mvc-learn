@@ -53,7 +53,7 @@
 
     model.addAttribute(...)
 
-Крок 3
+# Крок 3
 У first-view.jsp виведи повідомлення через:
 
     ${...}

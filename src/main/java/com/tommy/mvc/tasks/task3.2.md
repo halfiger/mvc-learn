@@ -1,7 +1,5 @@
 # 1. Про @RequestParam
 
-Ти абсолютно правий:
-
     @RequestParam("employeeName")
 
 означає:
