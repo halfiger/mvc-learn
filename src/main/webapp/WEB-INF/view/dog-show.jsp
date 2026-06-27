@@ -4,7 +4,11 @@
 
 <body>
 
-name: ${requestParamName}
+name: ${dog.name}
+<br>
+color: ${dog.color}
+<br>
+age: ${dog.age}
 
 </body>
 

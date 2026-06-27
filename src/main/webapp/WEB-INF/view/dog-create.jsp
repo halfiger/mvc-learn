@@ -1,3 +1,5 @@
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+
 <!DOCTYPE html>
 
 <html>
@@ -9,14 +11,18 @@ Enter dog name
 </h4>
 
 <br>
-<form action = "dog-show-page" method = "GET">
-<input type = "text" name = "dogName">
-<input type = "submit" value = "show dog name">
 <br>
+<form:form action = "dog-show-page" modelAttribute="dog">
+        name <form:input path = "name"/>
+        <br>
+        color <form:input path = "color"/>
+        <br>
+        age <form:input path = "age"/>
+        <br>
+        <input type = "submit" value = "OK">
+        </form:form>
+        <br>
 
+        </body>
 
-
-
-</body>
-
-</html>
+        </html>
