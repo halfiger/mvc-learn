@@ -5,7 +5,10 @@
 
 <body>
 
-${name}
+${pig.name}
+${pig.age}
+${pig.weight}
+
 </body>
 
 </html>

@@ -2,6 +2,7 @@ package com.tommy.mvc.chat;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -15,13 +16,14 @@ public class PigController {
     }
 
     @RequestMapping ("/create-pig")
-    public String createPage () {
+    public String createPage (Model model) {
+        model.addAttribute("pig", new Pig());
         return "pig-create";
     }
 
     @RequestMapping ("/show-pig")
-    public String showPage (@RequestParam ("pigName") String pigName, Model model) {
-        model.addAttribute("name", pigName);
+    public String showPage (@ModelAttribute("pig") Pig pig, Model model) {
+        model.addAttribute("pig", pig);
         return "pig-show";
     }
 }

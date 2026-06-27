@@ -7,13 +7,19 @@
 
 enter pig name
 
-<form action = "show-pig" method = "GET">
-<br>
-pig name  <input type = "text" name = "pigName">
-<br>
-<input type = "submit" value = "go">
+<form:form action = "show-pig" modelAttribute = "pig">
 
-</form>
+        name <form:input path = "name"/>
+        <br>
+        age <form:input path = "age"/>
+        <br>
+        weight <form:input path = "weight"/>
+        <br>
+
+        <input type = "submit" value = "OK">
+
+</form:form>
+        <br>
 
 </body>
 
